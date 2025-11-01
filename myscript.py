@@ -13,7 +13,7 @@ print(f"git bisect start {bad} {good}")
 os.system(f"git bisect start {bad} {good}")
 
 print("Lancement de git bisect run avec la commande de test Django")
-rc = os.system("git bisect run python manage.py tests")
+rc = os.system("git bisect run python manage.py test budget.tests")
 
 print("Reset bisect")
 os.system("git bisect reset")
